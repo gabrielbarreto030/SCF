@@ -31,8 +31,8 @@ app.get('/', function(req, res){
 app.get("/user", teste1.getUser);
 app.get("/users", teste1.getUsers);
 app.post("/users", teste2)
-app.delete("/users", teste3)
-app.put("/users", teste4)
+app.delete("/users",checkPermissions ,teste3)
+app.put("/users",checkPermissions ,teste4)
 app.get("/users/access", teste5);
 
 
